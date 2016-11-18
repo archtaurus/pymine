@@ -1,0 +1,28 @@
+# Version beta 0.6 05/05/13
+Class Minefield and Class Block optimized
+Some bitmaps updated
+# Version beta 0.5 05/01/13
+Main program structure updated
+Minefield size is now changeable by press keys of "wasd"
+Sound "win" doesn't play bug fixed
+# Version beta 0.4 04/29/13
+Game name changed to PyMine :)
+Main program structure updated
+Class Minefield is separated to lib/minefield.py
+# Version beta 0.3 04/28/13
+Main program structure is optimized
+Class Block is separated to lib/block.py
+Class Block is optimized and more readable
+Stuffs for sound and music are separated to lib/mixer.py
+Cursor image shovel.png redrawed
+# Version beta 0.2 04/27/13
+Main program structure is optimized
+R key to reset and play again
+Function render_text() is separated in module lib/utility.py
+New class MyMouse is added in module lib/utility.py
+Add custom mouse cursor
+New game font resource/font/exl.ttf
+Class Block is rewritten and optimized
+Auto-dig bug fixed
+# Version beta 0.1 03/26/13
+source file lost
