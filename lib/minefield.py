@@ -25,9 +25,9 @@ class Minefield(object):
     def new(self):
         stop_sound()
         self.font_size = min(self.number_of_columns, self.number_of_rows) * 2
-        self.font = pygame.font.Font('resource/font/exl.ttf', self.font_size)
+        self.font = pygame.font.Font('resource/font/acknowtt.ttf', self.font_size)
         self.number_of_blocks = self.number_of_columns * self.number_of_rows
-        self.number_of_mines = self.number_of_blocks / 6
+        self.number_of_mines = self.number_of_blocks // 6
         self.number_of_safe_blocks = self.number_of_blocks - self.number_of_mines
         self.size_of_window = (self.size_of_block * self.number_of_columns, self.size_of_block * self.number_of_rows)
         self.screen = pygame.display.set_mode(self.size_of_window, 0, 32)
@@ -59,7 +59,7 @@ class Minefield(object):
                         self.blocks[n].ambient_blocks.append(self.blocks[i])
                         self.blocks[n].number_of_ambient_mines += self.blocks[i].mined
             column = n % self.number_of_columns
-            row = n / self.number_of_columns
+            row = n // self.number_of_columns
             x = self.size_of_block * column
             y = self.size_of_block * row
             self.blocks[n].rect = Rect(x, y, self.size_of_block, self.size_of_block)
@@ -70,7 +70,7 @@ class Minefield(object):
     def click(self, position, button):
         if self.state == "playing":
             (x, y) = position
-            n = (x / self.size_of_block) + self.number_of_columns * (y / self.size_of_block)
+            n = (x // self.size_of_block) + self.number_of_columns * (y // self.size_of_block)
             self.blocks[n].click(button)
 
     def win(self):
