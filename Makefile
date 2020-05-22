@@ -11,4 +11,5 @@ play: .venv
 	pipenv run python pymine.py
 
 .venv:
+	sudo pacman -S sdl sdl_image sdl_mixer sdl_ttf portmidi python-pygame
 	pipenv install --dev
